@@ -1,4 +1,4 @@
-const FULL_ALPHABET = "abcdefghijklmnopqrstuvwxyz".split("");
+const FULL_ALPHABET = "abcdefghijklmnopqrstuvwxyz";
 
 export const findUnusedLetters = (s: string): string => {
   if (typeof s !== "string") {
@@ -6,11 +6,11 @@ export const findUnusedLetters = (s: string): string => {
   }
 
   let unusedLetters = "";
-  FULL_ALPHABET.forEach((letter) => {
+  for (const letter of FULL_ALPHABET) {
     if (s.match(letter) === null) {
       unusedLetters += letter;
     }
-  });
+  };
 
   return unusedLetters;
 };
